@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>United States Education Spending</title>
+    <title>US Education Spending Map</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
@@ -56,7 +56,7 @@
 
         #features {
             top: 0;
-            height: 230px;
+            height: 250px;
             margin-top: 20px;
             width: 250px;
         }
@@ -64,7 +64,7 @@
         #legend {
             padding: 10px;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-            line-height: 18px;
+            line-height: 20px;
             height: auto;
             margin-bottom: 40px;
             width: auto;
@@ -85,7 +85,7 @@
 
         .slidecontainer {
             position: absolute;
-            top: 210px;
+            top: 240px;
             left: 30px;
             width: 230px; /* Width of the outside container */
             height: 200px;
@@ -129,9 +129,9 @@
     
     <div id="map"></div>
     <div class='map-overlay' id='features'>
-        <h2>United States Public Education funding per state (<span id='demo'></span>)</h2>
+        <h2>United States K-12 Education Spending per Student (<span id='demo'></span>)</h2>
         <div id='text-description'>
-            <p>Select a state to find out the annual spending for education.</p><p>If you want to change a year use the slider below!</p>
+            <p>Hovering over a state will show the amount it spent on each student in the given year</p><p>If you want to select a different year use the slider below!</p>
         </div>
     </div>
     <div class="slidecontainer">
@@ -141,12 +141,12 @@
     <script>
         // initialize basemmap
         mapboxgl.accessToken =
-            'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw';
+            'pk.eyJ1IjoiYWlkYW5jb2ZmbWFuIiwiYSI6ImNsYmxwaXQwdjA5dG8zb255cDFubzJnbDMifQ.tqru34CnD3ZT50uAqZPW6A';
         const map = new mapboxgl.Map({
             container: 'map', // container ID
-            style: 'mapbox://styles/mapbox/dark-v10', // style URL
-            zoom: 3, // starting zoom
-            center: [-100, 40] // starting center
+            style: 'mapbox://styles/aidancoffman/clbptm9lv000315s1xjramzpi', // style URL
+            zoom: 3.4, // starting zoom
+            center: [-110, 44] // starting center
         });
 
 
@@ -187,7 +187,7 @@
                             25520,        // stop_input_6
                             "#ff00ff"    // stop_output_7
                         ],
-                        'fill-outline-color': '#FFFFFF',
+                        'fill-outline-color': '#212121',
                         'fill-opacity': 0.7,
                     }
                 });
@@ -214,7 +214,7 @@
 
                 // create legend
                 const legend = document.getElementById('legend');
-                legend.innerHTML = "<b>Funding per State<br></b><br>";
+                legend.innerHTML = "<b>Per Pupil Spending<br></b><br>";
 
 
                 layers.forEach((layer, i) => {
@@ -239,7 +239,7 @@
 
                 document.getElementById('text-description').innerHTML = state.length ?
                     `<h3>${state[0].properties.name}</h3><p>$<strong><em>${state[0].properties.Average}</strong> invested in public education</em></p>` :
-                    `<p>Select a state to find out the annual spending for education.</p><p>If you want to change a year use the slider below!</p>`;
+                    `<p>Hovering over a state will show the amount it spent on each student in the given year</p><p>If you want to select a different year use the slider below!</p>`;
             });
         }
         
@@ -251,7 +251,7 @@
         rangeslider.addEventListener('change', newYear())
 
         function newYear() {
-            output.innerHTML = 'Average';
+            output.innerHTML = 'Average 2002-2020';
 
             rangeslider.oninput = function() {
                 let newYear = this.value;
@@ -301,7 +301,7 @@
                             25520,        // stop_input_6
                             "#ff00ff"    // stop_output_7
                         ],
-                    'fill-outline-color': '#BBBBBB',
+                    'fill-outline-color': '#212121',
                     'fill-opacity': 0.7,
                 }
             });
@@ -314,7 +314,7 @@
                 let stateFunding = state[0].properties[year];
                 document.getElementById('text-description').innerHTML = state.length ?
                     `<h3>${state[0].properties.name}</h3><p>$<strong><em>${stateFunding}</strong> invested in public education</em></p>` :
-                    `<p>Select a state to find out the annual spending for education.</p><p>If you want to change a year use the slider below!</p>`;
+                    `<p>Hovering over a state will show the amount it spent on each student in the given year</p><p>If you want to select a different year use the slider below!</p>`;
             });
         }
         
