@@ -34,7 +34,10 @@ We made a choropleth map that shows the spending data for Public Elementary - Se
 ![This is a screenshot showing the format of our .geojson file.](img/geojson.png)
 
 ## Main Functions
-- xx
+Our site uses a slider function to filter the data by year, the user can select the year they would like to view and the website will dynamically change to show the filtered data. In order for the data to load the slider function runs every time the slider value is changed. The legend allows users to see the category of income each state invested in education for the filtered year. The user could see which year they are currently viewing on the main panel. This uses the following functions:
+- **geojsonFetch** - This gets our .geojson file for Mapbox.
+- **loadingData** - This contains *map.addSource* and *map.addLayer* which add the map layer for the year selected and run when the map loads. It also loads the Legend and initializes the mouse-over feature.
+- **changeYear** - This function removes the map layer and associated source and then replaces them both with ones that call for the correct property from the .geojson file.It also corrects the mouse-over feature to work with the new data source. It is run each time the slider is used.
 
 ## Data Sources
 - The [US Census Bureau’s website](https://www.census.gov/data/tables/2002/econ/school-finances/secondary-education-finance.html) provided us our data available on slide 8 of the “State-Level Tables” .xls file.
@@ -57,5 +60,5 @@ We made a choropleth map that shows the spending data for Public Elementary - Se
 - geojson.io helped us visualize changes to our .geojson file and verify that it was still functional.
 - [OpenAI's Chat demo](https://chat.openai.com/chat) for resolving a simple JS challenge that we spent an hour trying to solve on our own.
 - Mapbox documentation was extremely helpful in understanding some of the features we wanted to implement.
-- Professor Zhao and TA Steven Bao have been very accomodating toward our issues with time constraints and when one of our members was sick.
-- Discord allowerd us to arrange meetings remotely and provided quick communication about the project.
+- Professor Zhao and TA Steven Bao have been very accommodating toward our issues with time constraints and when one of our members was sick.
+- Discord allowed us to arrange meetings remotely and provided quick communication about the project.
