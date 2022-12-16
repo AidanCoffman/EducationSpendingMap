@@ -25,8 +25,9 @@ The target audience for this project is parents and students who are looking for
 We made a choropleth map that shows the spending data for Public Elementary - Secondary Education using an understandable color scale. We implemented an interactive time slider on our map for users to select different years and see the state spending data available for the chosen year.
 
 ## Links
-[Map Webpage](https://aidancoffman.github.io/BB4FP/state_spending_edu.html)
-[Map Repository](https://github.com/AidanCoffman/BB4FP)
+- [Map Webpage](https://aidancoffman.github.io/BB4FP/state_spending_edu.html)
+
+- [Map Repository](https://github.com/AidanCoffman/BB4FP)
 
 ## Screenshots
 ![This is a Screenshot of the Webmap Available by Visiting our website. It portrays a choropleth map of the United States shaded on a scale where redder states are spending less per student, whiter states are spending an average amount, and greener states are paying more per student. In the top left corner is a description of the map with basic instruction on using the slider to view different years. In the bottom Corner is a Legend explaining the spending ranges captured by each shade of red to white to green.](img/Webpage.png)
