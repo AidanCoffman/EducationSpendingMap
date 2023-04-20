@@ -57,10 +57,7 @@ Our site uses a slider function to filter the data by year, the user can select 
 - GitHub
 
 ## Acknowledgements
-- Special thanks to Lisette for helping sort out and explain some confusing code.
 - QGIS allowed us to save a lot of time by combining our data .csv with our .geojson
 - geojson.io helped us visualize changes to our .geojson file and verify that it was still functional.
-- [OpenAI's Chat demo](https://chat.openai.com/chat) for resolving a simple JS challenge that we spent an hour trying to solve on our own.
 - Mapbox documentation was extremely helpful in understanding some of the features we wanted to implement.
-- Professor Zhao and TA Steven Bao have been very accommodating toward our issues with time constraints and when one of our members was sick.
 - Discord allowed us to arrange meetings remotely and provided quick communication about the project.
