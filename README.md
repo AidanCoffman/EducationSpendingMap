@@ -1,6 +1,6 @@
 # Final Project Proposal BB4
 
-**-Aidan James Coffman and Baldemar Zamudio**
+**-Aidan Coffman and Baldemar Zamudio**
 
 ## Summary
 Broadly, this project is intended to demonstrate our ability to synthesize skills and concepts learned in this class with new data. We are also meant to demonstrate our ability to select a topic and collect data to be used in an effective and clear way. Documenting that process and overcoming the hurdles shows our web mapping capabilities. The project was also meant to strengthen our ability to work with other people in our field that have varying skill sets and experience. We used GitHub’s repositories feature to share our files and collaborate on different aspects of the project. This allowed us to test our website and stay in touch about project progress.
