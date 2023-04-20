@@ -1,4 +1,4 @@
-# Final Project Proposal BB4
+# Final Project
 
 **-Aidan Coffman and Baldemar Zamudio**
 
